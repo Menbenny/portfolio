@@ -1,24 +1,50 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import React, { useEffect } from 'react';
+import Preloader from '../src/components/Pre.js';
+import  Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About'
+import Projects from './components/Projects/Projects';
+import Footer from './components/Footer.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router=dom";
+import ScrollToTop from './components/ScrollToTop.js';
+import './style.css';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-setupCounter(document.querySelector('#counter'))
+function App() {
+  const [load, updateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimer(() => {
+      updateLoad(false);
+    }, 1200);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Router>
+      <Preloader load={load} />
+      <div className='App' id={load ? "no-scroll" : "scroll"}>
+        <Navbar/>
+        <ScrollToTop/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/projects" element={<Projects />}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/resume" element={<Resume/>}/>
+          <Route path="*" element={<Navigate to="/"/>}/>
+        </Routes>
+        <Footer/>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
