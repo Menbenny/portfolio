@@ -1,6 +1,6 @@
 import React from "react";
-function Pre() {
-    return <div id={props.load ? "preloader" : "preloader-none"}></div>
+function Pre(props) {
+  return <div id={props.load ? "preloader" : "preloader-none"}></div>;
 }
 
-export default Pre; 
+export default Pre;

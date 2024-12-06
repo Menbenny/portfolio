@@ -1,26 +1,26 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt"
+import Tilt from "react-parallax-tilt";
 import {
-    AiFillGithub,
-    AiOutlineTwitter,
-    AiFillInstagram,
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-function Home2(){
-    return (
-        <Container fluid className="home-about-section" id="about">
-            <Container>
-            <Row>
+function Home2() {
+  return (
+    <Container fluid className="home-about-section" id="about">
+      <Container>
+        <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
               I fell in love with programming and I have at least learnt
-              something, I thinkâ€¦
+              something, I think… 
               <br />
               <br />I am fluent in classics like
               <i>
@@ -67,7 +67,7 @@ function Home2(){
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/soumyajit4419"
+                 href="https://github.com/Menbenny"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -77,7 +77,7 @@ function Home2(){
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/Soumyajit4419"
+                  href=""
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -87,7 +87,7 @@ function Home2(){
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/soumyajit4419/"
+                 href="https://www.linkedin.com/in/binyaminmarothi/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -97,7 +97,7 @@ function Home2(){
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                 href="https://instagram.com/b__marothi/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
@@ -108,9 +108,8 @@ function Home2(){
             </ul>
           </Col>
         </Row>
-            </Container>
-        </Container>
-    )
+      </Container>
+    </Container>
+  );
 }
-
 export default Home2;
