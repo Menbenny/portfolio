@@ -4,7 +4,7 @@ import {
     AiFillGithub,
     AiOutlineTwitter,
     AiFillInstagram,
-} from "react-icon/ai";
+} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {

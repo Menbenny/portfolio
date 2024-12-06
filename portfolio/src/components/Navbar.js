@@ -14,7 +14,7 @@ import {
   import { CgFileDocument } from "react-icons/cg";
 
 
-function Navbar() {
+function NavBar() {
     const [expand, updateExpanded] = useState(false);
     const [navColour, updateNavbar] = useState(false);
 
@@ -116,3 +116,5 @@ function Navbar() {
     </Navbar>
     )
 }
+
+export default NavBar;

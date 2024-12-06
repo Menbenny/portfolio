@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import Preloader from '../src/components/Pre.js';
 import  Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About'
-import Projects from './components/Projects/Projects';
-import Footer from './components/Footer.js'
+import Home from './components/Home/Home';
+import About from './components/About/About';
+// import Projects from './components/Projects/Projects';
+import Footer from './components/Footer.js';
 
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate
-} from "react-router=dom";
+} from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop.js';
 import './style.css';
 import './App.css';
